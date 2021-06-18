@@ -37,9 +37,9 @@ async function main(): Promise<void> {
     
       const answers2: IAnswer = await prompt(questionFrom);
       const fromTicker = answers2.from || '';
-      const existInTheListFiat = fiatList.find(i => i === fromTicker);
+      const isFiat = fiatList.find(i => i === fromTicker);
     
-      if (existInTheListFiat) {
+      if (isFiat) {
         questionTo.choices = cryptoList;
       } else {
         questionTo.choices = allCurrencies;
