@@ -1,8 +1,7 @@
-import { createRequest } from "../../utils/requestModule/request";
-import { ICurrencyConvert } from "../../utils/requestModule/types";
-import { ConvertPort } from '../../domain/ports/convert.port';
+import { createRequest } from "../requestModule/request";
+import { ICurrencyConvert } from "../requestModule/types";
 
-export class ConvertCurrency implements ConvertPort {
+export class ConvertCurrency {
   async convert(amount: number, from: string, to: string) {
     try {
       const prefixUri = '/cryptocurrency/quotes/latest';

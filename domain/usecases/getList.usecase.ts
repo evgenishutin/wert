@@ -1,11 +1,15 @@
-import { ListPort } from "../ports/getCurrencies.port";
+import { CurrenciesPort } from "../ports/getCurrencies.port";
+import { List } from '../entities/list.entity';
 
-export class List {
+export class ListUseCase extends List {
   constructor(
-    private readonly _port: ListPort
-  ) {}
+    private readonly _port: CurrenciesPort
+  ) {
+    super();
+  }
 
-  async getList(prefix: string, qs: any) {
-    return await this._port.getList(prefix, qs);
+  async getList(nameList: string) {
+    this.list = await this._port.getList(nameList);
+    return this.list;
   }
 }

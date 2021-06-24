@@ -45,15 +45,9 @@ interface IFiatInfo {
   symbol: string,
 }
 
-export interface IQueryParams {
-  start?: string,
-  limit?: string,
-  convert?: string
-}
-
 export interface ICurrenciesList {
   status: IBaseInfo,
-  data: ICurrency[]
+  data: ICurrency[] | IFiatInfo[]
 }
 
 export interface ICurrencyConvert {
@@ -61,6 +55,8 @@ export interface ICurrencyConvert {
   data: { [key: string]: ICurrency }
 }
 
-export interface IFiatList extends IBaseInfo {
-  data: IFiatInfo[]
+export interface IQueryParams {
+  start?: string,
+  limit?: string,
+  convert?: string
 }
