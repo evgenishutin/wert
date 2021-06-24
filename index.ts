@@ -1,10 +1,10 @@
 import { prompt } from 'enquirer';
 import { ListUseCase } from "./domain/usecases/getList.usecase";
 import { ConvertUseCase } from "./domain/usecases/convert.usecase";
-import { IAnswer } from './modules/enquirerModule/types';
-import * as questions from './modules/enquirerModule/config';
-import { ConvertCurrency } from "./modules/adapters/convert.adapter";
-import { GetCurrensiesAdapter } from './modules/adapters/getList.adapter';
+import { IAnswer } from './infrastructures/enquirerModule/types';
+import * as questions from './infrastructures/enquirerModule/config';
+import { ConvertCurrency } from "./infrastructures/adapters/convert.adapter";
+import { GetCurrensiesAdapter } from './infrastructures/adapters/getList.adapter';
 
 async function main(): Promise<void> {
   try {
