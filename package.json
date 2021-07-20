@@ -2,7 +2,7 @@
   "name": "wert-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "start": "tsc && node ./dist/index.js"
   },
@@ -10,11 +10,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/big.js": "^6.1.1",
     "@types/node": "^15.12.2",
     "@types/request-promise": "^4.1.47",
     "typescript": "^4.3.2"
   },
   "dependencies": {
+    "big.js": "^6.1.1",
     "dotenv": "^10.0.0",
     "enquirer": "^2.3.6",
     "readline-promise": "^1.0.5",
